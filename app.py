@@ -31,11 +31,11 @@ if uploaded_file:
     st.subheader("📨 Generierter Prompt")
     st.code(filled_prompt, language="markdown")
 
-    if st.button("🧠 Anfrage an lokales LLM (llama2:7b-chat) senden"):
+    if st.button("🧠 Anfrage an lokales LLM (mistral) senden"):
         try:
             response = requests.post(
                 "http://localhost:11434/api/generate",
-                json={"model": "llama2:7b-chat", "prompt": filled_prompt, "stream": True},
+                json={"model": "mistral", "prompt": filled_prompt, "stream": True},
                 stream=True
             )
 

@@ -1,0 +1,6 @@
+{
+  "verlauf": "Patient stellte sich mit blutendem Muttermal an der linken Schulter vor.",
+  "diagnosen": ["Naevus", "Hautblutung"],
+  "labor": {"CRP": "12 mg/L", "Hb": "138 g/L"},
+  "ziel": "Dermatologie"
+}

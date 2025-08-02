@@ -34,7 +34,7 @@ if uploaded_file:
     if st.button("🧠 Anfrage an lokales LLM (mistral) senden"):
         try:
             response = requests.post(
-                "http://localhost:11434/api/generate",
+                "http://127.0.0.1:11434/api/generate",  # ✅ funktioniert auf RunPod zuverlässig
                 json={"model": "mistral", "prompt": filled_prompt, "stream": True},
                 stream=True
             )
@@ -50,4 +50,3 @@ if uploaded_file:
 
         except Exception as e:
             st.error(f"Fehler bei der Anfrage an das lokale Modell: {e}")
-
